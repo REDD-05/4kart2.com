@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4-KART   🛒 </title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Body Background with Transparent Overlay */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://wallup.net/wp-content/uploads/2017/12/01/560375-merry-christmas-holiday-winter-snow-beautiful-tree-gift-santa.jpg');
+            background-size: cover;
+            background-repeat:  no-repeat;
+            background-attachment:   fixed;
+            position: relative;
+            color: black;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            z-index: -1; /* Ensures content stays above overlay */
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+            margin: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s, border 0.3s, background-color 0.3s;
+            color: black;
+        }
+
+        .product:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            border: 2px solid #28a745;
+            background-color: rgba(240, 240, 240, 0.9);
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product h3 {
+            font-size: 1.5rem;
+            margin-top: 15px;
+        }
+
+        .product p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .product .price {
+            font-size: 1.25rem;
+            color: #b12704;
+            margin: 10px 0;
+        }
+
+        .product button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: calc(33.333% - 10px);
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-bottom: 5px;
+        }
+
+        .product button:hover {
+            background-color: #218838;
+        }
+
+        .product .action-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Styles for Carousel (Swiping Banner) */
+        .carousel {
+            position: relative;
+            width: 50%;
+            max-width: 50%;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .carousel-images img {
+            width: 50%;
+            height: auto;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .carousel-control-prev {
+            left: 10px;
+        }
+
+        .carousel-control-next {
+            right: 10px;
+        }
+
+        /* Responsive Carousel */
+        @media (max-width: 768px) {
+            .carousel-images img {
+                height: 200px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1><b>4-KART   🛍🛒  </b></h1>
+        <p>"Bringing the best🛒  to your doorstep —one click at a time."</p>
+    </header>
+
+    <nav>
+        <a href="4kart2.html">HOME</a>
+        <a href="shop.html">SHOP</a>
+        <a href="about us.html">ABOUT US</a>
+        <a href="contact.html">CONTACT</a>
+      
+    </nav>
+
+    <!-- Swiping Banner (Carousel) -->
+    <div class="carousel">
+        <div class="carousel-images">
+   <img src="C:\Users\hp\Downloads/banner0.jpg" alt="Banner image 1">
+   <img src="C:\Users\hp\Downloads/banner2.jpg" alt="Banner image 2">         
+  <img src="C:\Users\hp\Downloads/bannerA.jpeg" alt="Banner image 3">
+  <img src="C:\Users\hp\Downloads/bannerB.jpeg" alt="Banner image 4">
+  <img src="C:\Users\hp\Downloads/bannerD.jpg" alt="Banner image 5">
+  <img src="C:\Users\hp\Downloads/bannerE.jpeg" alt="Banner image 6">
+  <img src="C:\Users\hp\Downloads/bannerF.jpeg" alt="Banner image 7">
+ </div>
+        <div class="carousel-control-prev" onclick="moveSlide(-1)">&#10094;</div>
+        <div class="carousel-control-next" onclick="moveSlide(1)">&#10095;</div>
+    </div>
+
+    <div class="container">
+        <!-- Product Example -->
+        <div class="product">
+            <img src="C:\Users\hp\Downloads\ELECTRONICS.JPG" alt="Product Image">
+            <h3>ELECTRONICS</h3>
+            <p>Electronics with discounts up to 20-30% OFF.</p>
+            <p class="price"> starting from RS 100.00 </p>
+            <div class="action-buttons">
+      <p> ➡</p>
+            </div>
+        </div>
+
+    <!-- Product 2 -->
+        <div class="product">
+            <img src="C:\Users\hp\Downloads\FASHION.JPG" alt="Product Image">
+            <h3>FASHION</h3>
+            <p>FASHION HAVING DISCOUNT UPTO 50-60% OFF.</p>
+            <p class="price">starting from RS  49.99</p>
+            <div class="action-buttons">
+               <p> ➡</p> 
+                
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="C:\Users\hp\Downloads\grocery.jpg" alt="Product Image">
+            <h3>GROCERY</h3>
+            <p>GROCERY HAVING DISCOUNT UPTO 20-25% OFF.</p>
+            <p class="price">starting from RS  30.00</p>
+            <div class="action-buttons">
+               <p> ➡</p> 
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="C:\Users\hp\Downloads\sports.JPG" alt="Product Image">
+            <h3>SPORTS</h3>
+            <p>SPORTS ITEMS HAVING DISCOUNT UPTO 45-50% OFF.</p>
+            <p class="price">starting from RS 500.00</p>
+            <div class="action-buttons">
+              <p> ➡</p>
+            </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="C:\Users\hp\Downloads\furniture.JPeG" alt="Product Image">
+            <h3>FURNITURE</h3>
+            <p>FURNITURES HAVING UPTO 25-30% OFF.</p>
+            <p class="price">starting from RS 5,000.00</p>
+            <div class="action-buttons">
+            <p> ➡</p>
+            </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="C:\Users\hp\Downloads\mobiles.jpg" alt="Product Image">
+            <h3>MOBILES</h3>
+            <p>MOBILES HAVING UPTO 20-30% OFF.</p>
+            <p class=">price"starting from RS 11,000.00</p>
+            <div class="action-buttons">
+   <p> ➡</p>
+            </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="C:\Users\hp\Downloads\travel.JPG" alt="Product Image">
+            <h3>TRAVELS</h3>
+            <p>TRAVELS HAVING A HUGE DISCOUNT OVER 30% OFF.</p>
+            <p class="price">starting from RS 2000.00</p>
+            <div class="action-buttons">
+               <p> ➡</p> 
+            </div>
+        </div>
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="C:\Users\hp\Downloads\gadgets.JPeG" alt="Product Image">
+            <h3>GADJETS</h3>
+            <p>GADJETS HAVING DISCOUNT UPTO 40-45% OFF.</p>
+            <p class="price">starting from RS 99.99</p>
+            <div class="action-buttons">
+            <p>                                                       ➡                                   </p>  
+    </div>
+</div>        <!-- Product 9 -->
+        <div class="product">
+            <img src="C:\Users\hp\Downloads\appliances.JPG" alt="Product Image">
+            <h3>APPLIANCES</h3>
+            <p>APPLIANCES HAVING DISCOUNT UPTO 20-30% OFF.</p>
+            <p class="price">starting from RS 4,000.00</p>
+            <div class="action-buttons">
+              <p>                                                  ➡                                      </p>
+    </div>
+</div>
+        <!-- Product 10-->
+        <div class="product">
+            <img src="C:\Users\hp\Downloads\beauty.JPG" alt="Product Image">
+            <h3>BEAUTY</h3>
+            <p>BEAUTY PRODUCTS HAVING DISCOUNT UPTO 50-60% OFF.</p>
+            <p class="price">starting from RS 49.99</p>
+            <div class="action-buttons">
+               <p>                                           ➡                                       </p>
+    </div>
+</div>
+        <!-- Product 11-->
+        <div class="product">
+            <img src="C:\Users\hp\Downloads\ACCESSORIES.JPG" alt="Product Image">
+            <h3>ACCESSORIES</h3>
+            <p>ACCESSORIES HAVING DISCOUNT UPTO 50-60% OFF.</p>
+            <p class="price">starting from RS 49.99</p>
+            <div class="action-buttons">
+                <p>                                      ➡                                          </p> 
+    </div>
+</div>
+        <!-- Product 12-->
+        <div class="product">
+            <img src="C:\Users\hp\Downloads\SHOES.JPG" alt="Product Image">
+            <h3>SHOES</h3>
+            <p>SHOES HAVING DISCOUNT UPTO 70-80% OFF.</p>
+            <p class="price">starting from RS 300.00</p>
+            <div class="action-buttons">
+               <p>                                         ➡                                           </p>
+    </div>
+</div>
+
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Online Store. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to move the carousel images
+        let slideIndex = 0;
+
+        function moveSlide(n) {
+            const slides = document.querySelectorAll('.carousel-images img');
+            const totalSlides = slides.length;
+
+            slideIndex += n;
+            if (slideIndex >= totalSlides) {
+                slideIndex = 0;
+            } else if (slideIndex < 0) {
+                slideIndex = totalSlides - 1;
+            }
+
+            const offset = -slideIndex * 100;
+            document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+        }
+
+        // Auto-rotate carousel every 5 seconds
+        setInterval(() => moveSlide(1), 5000);
+    </script>
+
+</body>
+
+</html>
